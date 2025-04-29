@@ -1,0 +1,66 @@
+# Ignore build results
+bin/
+obj/
+*.apk
+*.apks
+*.aab
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Auto-generated files
+*.pdb
+*.cache
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Visual Studio folders
+.vscode/
+.vs/
+Generated_Code/
+
+# Rider IDE
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MAUI specific
+Platforms/Android/obj/
+Platforms/iOS/obj/
+Platforms/MacCatalyst/obj/
+Platforms/Tizen/obj/
+Platforms/Windows/obj/
+Platforms/Android/bin/
+Platforms/iOS/bin/
+Platforms/MacCatalyst/bin/
+Platforms/Tizen/bin/
+Platforms/Windows/bin/
+
+# NuGet Packages
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet CLI
+*.props
+*.targets
+
+# Secrets and user data
+secrets.json
+*.key
+*.keystore
+*.pem
+*.pfx

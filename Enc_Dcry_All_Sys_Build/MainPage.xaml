@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Enc_Dcry_All_Sys_Build.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Message Encryption and Decryption App"
+                TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to the Message Encryption and Decryption App" />
+
+            <Entry 
+                x:Name="InputString"
+                Placeholder="Enter String For Decryption Or Encryption"
+                TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                FontSize="16" />
+            <Entry
+                x:Name="CesaerShift"
+                Placeholder="Enter Ceaser Shift Ammount"
+                TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                FontSize="16"/>
+            <VerticalStackLayout Padding="20" Spacing="10">
+                <Editor 
+                  x:Name="OutputString"
+                  IsReadOnly="True"
+                  Text="Output:"
+                  FontSize="16"
+                  TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                  AutoSize="TextChanges" />
+                <Button
+                     x:Name="CopyToClipboard"
+                     Text="Copy Text"
+                     TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                     Clicked="OnCopyClicked"
+                     Margin="10,0,0,0" />
+            </VerticalStackLayout>
+            
+            <HorizontalStackLayout Padding="10">
+                 <Button
+                     x:Name="EncryptrBtn"
+                     Text="Encrypt" 
+                     TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                     SemanticProperties.Hint="Encrypts String"
+                     Clicked="OnEncryptClicked"
+                     HorizontalOptions="Fill" />
+                <Button
+                      x:Name="DecryptBtn"
+                      Text="Decrypt"
+                      TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                      SemanticProperties.Hint="Decrypts String"
+                      Clicked="OnDecryptClicked"
+                      HorizontalOptions="Fill"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
