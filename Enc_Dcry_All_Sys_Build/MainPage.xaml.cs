@@ -37,14 +37,15 @@ namespace Enc_Dcry_All_Sys_Build
             }
 
             string text = InputString.Text;
-            text = Base64Decode(text);
-            text = Rot13(text);
-            text = Atbash(text);
-            text = CaesarDecrypt(text, shift);
+            text = Base64Decode(text);     // Base64 decode is not symmetric, so apply first
+            text = Rot13(text);            // Symmetric
+            text = Atbash(text);           // Symmetric
+            text = CaesarDecrypt(text, shift); // Final reverse Caesar
 
             OutputString.Text = text;
             SemanticScreenReader.Announce(OutputString.Text);
         }
+
 
         private static string CaesarEncrypt(string input, int shift)
         {

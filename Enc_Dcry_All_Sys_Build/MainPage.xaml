@@ -10,7 +10,7 @@
 
             <Label
                 Text="Message Encryption and Decryption App"
-                TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1"
                 SemanticProperties.Description="Welcome to the Message Encryption and Decryption App" />
@@ -23,7 +23,6 @@
             <Entry
                 x:Name="CesaerShift"
                 Placeholder="Enter Ceaser Shift Ammount"
-                TextColor="{AppThemeBinding Light=Black , Dark= White}"
                 FontSize="16"/>
             <VerticalStackLayout Padding="20" Spacing="10">
                 <Editor 
@@ -37,26 +36,29 @@
                      x:Name="CopyToClipboard"
                      Text="Copy Text"
                      TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                    BackgroundColor="{AppThemeBinding Light=LightGray}"
                      Clicked="OnCopyClicked"
                      Margin="10,0,0,0" />
-            </VerticalStackLayout>
-            
-            <HorizontalStackLayout Padding="10">
-                 <Button
+
+                <HorizontalStackLayout Padding="10">
+                    <Button
                      x:Name="EncryptrBtn"
                      Text="Encrypt" 
                      TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                     BackgroundColor="{AppThemeBinding Light=LightGray}"
                      SemanticProperties.Hint="Encrypts String"
                      Clicked="OnEncryptClicked"
                      HorizontalOptions="Fill" />
-                <Button
-                      x:Name="DecryptBtn"
+                    <Button
+                    x:Name="DecryptBtn"
                       Text="Decrypt"
                       TextColor="{AppThemeBinding Light=Black , Dark= White}"
+                      BackgroundColor="{AppThemeBinding Light=LightGray}"
                       SemanticProperties.Hint="Decrypts String"
                       Clicked="OnDecryptClicked"
                       HorizontalOptions="Fill"/>
-            </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
