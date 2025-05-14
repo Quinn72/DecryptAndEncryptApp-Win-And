@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="Enc_Dcry_All_Sys_Build.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Enc_Dcry_All_Sys_Build"
-    Shell.FlyoutBehavior="Flyout"
-    Title="Enc_Dcry_All_Sys_Build">
+    xmlns:pages="clr-namespace:Enc_Dcry_All_Sys_Build"
+    x:Class="Enc_Dcry_All_Sys_Build.AppShell">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Ceaser Ciphers">
+        <ShellContent ContentTemplate="{DataTemplate pages:CeasarCipher}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vigenère Cipher">
+        <ShellContent ContentTemplate="{DataTemplate pages:VigenereCipher}" />
+    </FlyoutItem>
 
 </Shell>

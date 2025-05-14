@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Enc_Dcry_All_Sys_Build
+﻿namespace Enc_Dcry_All_Sys_Build
 {
     public static class MauiProgram
     {

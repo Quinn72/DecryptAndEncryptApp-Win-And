@@ -5,6 +5,10 @@
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute(nameof(CeasarCipher), typeof(CeasarCipher));
+            Routing.RegisterRoute(nameof(VigenereCipher), typeof(VigenereCipher));
+
         }
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Enc_Dcry_All_Sys_Build.VigenereCipher"
+             Title="VigenereCipher">
+    <VerticalStackLayout Padding="20">
+        <Entry x:Name="InputText" Placeholder="Enter text" />
+        <Entry x:Name="KeywordText" Placeholder="Enter keyword" />
+        <Picker x:Name="ModePicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Encrypt</x:String>
+                    <x:String>Decrypt</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Text="Process" Clicked="OnProcessClicked" />
+         <Label
+            x:Name="OutputLabel"
+            Text="Encrypted text will appear here."
+            FontSize="16"/>
+
+        <Button
+            Text="Copy Output"
+            Clicked="CopyOutputButton_Clicked"
+             Margin="0,10,0,0"/>
+    </VerticalStackLayout>
+
+</ContentPage>
